@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Banner />
+    <div class="main-container">
+      <router-view/>
+    </div>
+    <div className="footer">
+      Learn more with our 
+      <a href="https://docs.passage.id">Documentation</a> and
+      <a href="https://github.com/passageidentity">Github</a>.
+      <br>       
+    </div>
   </div>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  </template>
+  <style>
+  body {
+    margin: 0px;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #E5E5E5;
   }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  
+  .main-container {
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 310px;
+    min-height: 310px;
+    margin: 30px auto;
+  }
+  
+  .footer {
+    text-align: center;
+    font-size: 18px;
+  }
+  </style>
